@@ -1,40 +1,41 @@
-import Link from "next/link";
 import { NavLinkProps } from "./interfaces";
 import NavLink from "./NavLink";
 
 const navLinks: NavLinkProps[] = [
   {
     href: "/",
-    title: "Home",
-    subtitle: "Welcome to my website",
+    title: "Amrik Malhans",
+    subtitle: "Software Engineer",
   },
   {
-    href: "/",
-    title: "Home",
-    subtitle: "Welcome to my website",
+    href: "/about",
+    title: "About",
+    subtitle: "Quick Facts",
   },
   // This is to create a space between the links, a little hacky but it works (I know I could use flexbox but I'm lazy)
   {
     href: "",
     title: "",
     subtitle: "",
+    // Delete it on smaller screens
+    className: "hidden md:block",
   },
   {
-    href: "/",
-    title: "Home",
-    subtitle: "Welcome to my website",
+    href: "/work-experience",
+    title: "Work",
+    subtitle: "3 Years Experience",
   },
   {
-    href: "/",
-    title: "Home",
-    subtitle: "Welcome to my website",
+    href: "/journal-entries",
+    title: "Thoughts",
+    subtitle: "5 Journal Entries",
   },
 ];
 
 const Navbar = () => {
   return (
     <nav>
-      <ul className={`text-sm grid grid-cols-${navLinks.length}`}>
+      <ul className={`text-sm grid grid-cols-${navLinks.length} p-5 ml-5`}>
         {navLinks.map((link) => (
           <NavLink
             key={link.title}
