@@ -9,7 +9,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Josefin: ["Josefin Sans", ...defaultTheme.fontFamily.sans],
+        Raleway: ["Raleway", ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        "oxford-blue": "#160C28",
       },
     },
   },
