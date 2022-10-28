@@ -35,7 +35,7 @@ const navLinks: NavLinkProps[] = [
 const Navbar = () => {
   return (
     <nav>
-      <ul className={`text-sm grid grid-cols-${navLinks.length} p-5 ml-5`}>
+      <ul className={`text-sm grid grid-cols-5 p-5 ml-5`}>
         {navLinks.map((link) => (
           <NavLink
             key={link.title}
